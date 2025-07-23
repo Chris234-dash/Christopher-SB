@@ -34,8 +34,19 @@
         .hero-gradient {
             background: linear-gradient(-45deg, #1e3a8a, #3b82f6, #111827, #1f2937);
             background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
+            position: relative;
+            overflow: hidden;
+            animation: gradientBG 20s ease infinite;
         }
+        .hero-gradient::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 150px; 
+        background: linear-gradient(to top, #111827, transparent);
+        z-index: 2;
         @keyframes gradientBG {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -110,7 +121,7 @@
     <main>
         <!-- ===== SECTION 1: OPENING/HERO ===== -->
         <section id="home" class="min-h-screen flex items-center pt-24 hero-gradient">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-left">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-left relative z-10">
                 <div class="max-w-4xl">
                     <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-8 leading-tight reveal">
                         ENGINEERING INNOVATION<br>MEETS BUSINESS ACUMEN.
@@ -120,6 +131,8 @@
                         <p>As an engineer, my expertise lies in process optimization, supply chain management, and the application of digitalization, including robotics and automation. Beyond the technical side, I’ve had the chance to lead and manage initiatives for over 300 students, an experience that truly sharpened my skills in project management and leadership.</p>
                         <p>I've always believed that the best engineering solutions are those that also make perfect business sense. To ensure a well-rounded perspective, I have purposefully expanded my expertise to include financial analysis and corporate strategy. This business acumen was sharpened through immersive experiences like investor bootcamps and business creation competitions. This dual perspective helps me ensure that every solution is not just innovative, but also commercially viable.</p>
                         <p>My goal now is to bring this blend of engineering skill and business insight to a new challenge. This portfolio is designed to provide a deeper insight into my projects and the methodologies I employ. Thank you for your visit.</p>
+                        <br>
+                        <br>
                     </div>
                 </div>
             </div>
